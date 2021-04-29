@@ -6,11 +6,11 @@ import keyListener from "./handlers/keys.js"
 
 import { createElementWithClass } from "./util/util.js"
 
-export default function Milk(width, height, settings) {
+export default function Milk(title, width, height, settings) {
 
 	this._existingContainer = null;
 
-	this.title = "";
+	this.title = title;
 
 	this._static = false;
 	this._redraw = true;
@@ -25,9 +25,6 @@ export default function Milk(width, height, settings) {
 
 		if(settings.container != undefined)
 			this._existingContainer = settings.container;
-
-		if(settings.title != undefined)
-			this.title = settings.title;
 
 		if(settings.static != undefined)
 			this._static = settings.static;
@@ -122,7 +119,7 @@ Milk.prototype.init = function(res, gameInit) {
 	if(this.debug == false) this.setDebug(this.debug);
 	log.c('%c' + this.title + " loading...", 'background: #846fa6; color: #dac9f5; padding: 4px;');
 
-	if(this.title != null) document.title = this.title;
+	// if(this.title != null) document.title = this.title;
 
 	this.gameInit = gameInit;
 
