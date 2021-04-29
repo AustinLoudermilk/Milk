@@ -10,7 +10,7 @@ export default function Milk(title, width, height, settings) {
 
 	this._existingContainer = null;
 
-	this.title = title;
+	this.title = null;
 
 	this._static = false;
 	this._redraw = true;
